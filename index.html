@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding">
+  <meta name="keywords"
+    content="GaussTR, 3D Semantic Occupancy Prediction, Self-Supervised Learning, Generalizable 3D Gaussian Splatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GaussTR: Foundation Model-Aligned Gaussian Transformer for
+              Self-Supervised 3D Spatial Understanding</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=_45BVtQAAAAJ">Haoyi
+                  Jiang</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">
+                Liu Liu<sup>2</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=PH8rJHYAAAAJ">Tianheng
+                  Cheng</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">
+                Xinjie Wang<sup>2</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://wzmsltw.github.io/">Tianwei Lin</a><sup>2</sup>,</span><br>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=HQfc8TEAAAAJ">Zhizhong
+                  Su</a><sup>2</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ">Wenyu Liu</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://xwcv.github.io/">Xinggang Wang</a><sup>1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Huazhong University of Science & Technology,&nbsp;</span>
+              <span class="author-block"><sup>2</sup>Horizon Robotics</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2412.13193" target="_blank"
+                    class="external-link button is-normal is-rounded is-light">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2412.13193" target="_blank"
+                    class="external-link button is-normal is-rounded is-light">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="link-block">
+                  <a href="https://github.com/hustvl/GaussTR" target="_blank"
+                    class="external-link button is-normal is-rounded is-light">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              3D Semantic Occupancy Prediction is fundamental for spatial understanding, yet existing approaches face
+              challenges in scalability and generalization due to their reliance on extensive labeled data and
+              computationally intensive voxel-wise representations.
+              In this paper, we introduce GaussTR, a novel Gaussian-based Transformer framework that unifies sparse 3D
+              modeling with foundation model alignment through Gaussian representations to advance 3D spatial
+              understanding. GaussTR predicts sparse sets of Gaussians in a feed-forward manner to represent 3D scenes.
+              By splatting the Gaussians into 2D views and aligning the rendered features with foundation models,
+              GaussTR facilitates self-supervised 3D representation learning and enables open-vocabulary semantic
+              occupancy prediction without requiring explicit annotations.
+              Empirical experiments on the Occ3D-nuScenes dataset demonstrate GaussTR's state-of-the-art zero-shot
+              performance of 12.27 mIoU, along with a 40% reduction in training time. These results highlight the
+              efficacy of GaussTR for scalable and holistic 3D spatial understanding, with promising implications in
+              autonomous driving and embodied agents.<br><br><br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" id="vis1" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/vis1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="vis3" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/vis3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="vis4" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/vis4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="vis2" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/vis2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Framework</h2>
+      <div class="content has-text-justified">
+        The GaussTR framework initiates with extracting multi-view features with pre-trained foundation models. A series
+        of Transformer layers then predict sparse sets of Gaussian queries to represent the 3D scene. During the
+        training phase, predicted Gaussians are rendered via differentiable splatting into source 2D views, enforcing
+        alignment with 2D depth and features from foundation models. At inference, Gaussian features are converted into
+        semantic logits by measuring similarity with text-embedded category vectors, followed by voxelization to produce
+        volumetric predictions.
+      </div>
+      <img src="static/images/framework.png">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Results</h2>
+      <div class="content has-text-justified">
+        GaussTR achieves state-of-the-art zero-shot performance of 12.27 mIoU, outperforming previous methods by 2.33
+        mIoU while reducing training time by 40%. GaussTR demonstrates performance superiority across diverse foundation
+        models including FeatUp and Talk2DINO. These findings validate the scalability and generalization of sparse
+        Gaussian-based 3D modeling and foundation model alignment for self-supervised spatial understanding.
+      </div>
+      <img src="static/images/main_results.png">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Visulizations</h2>
+      <div class="content has-text-justified">
+        We further analyze GaussTR’s cross-modal consistency by visualizing rendered 2D depth and segmentation maps of
+        Gaussian predictions. To improve interpretability, we apply color perturbations to the semantic maps to
+        highlight the distribution of individual Gaussians and reveal how they collectively reconstruct the scene
+        layout.
+        Additionally, GaussTR exhibits impressive generalization capability to novel and scarce categories, such as
+        traffic lights and street signs. Owing to its alignment with visual-language models, GaussTR can seamlessly
+        adapt to these categories, generating prominent activations in corresponding regions and further validating its
+        versatility.
+      </div>
+      <img src="static/images/vis.png">
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3">BibTeX</h2>
+      <pre><code>@inproceedings{GaussTR,
+  title     = {GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding},
+  author    = {Haoyi Jiang and Liu Liu and Tianheng Cheng and Xinjie Wang and Tianwei Lin and Zhizhong Su and Wenyu Liu and Xinggang Wang},
+  year      = 2025,
+  booktitle = {CVPR}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        Website built upon <a href="https://github.com/nerfies/nerfies.github.io">&nbsp;Nerfies</a>.
+        Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">&nbsp;CC BY-SA 4.0
+          License</a>.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
