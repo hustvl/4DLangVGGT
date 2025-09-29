@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-    content="GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding">
+    content="4DLangVGGT: 4D Language Visual Geometry Grounded Transformer">
   <meta name="keywords"
-    content="GaussTR, 3D Semantic Occupancy Prediction, Self-Supervised Learning, Generalizable 3D Gaussian Splatting">
+    content="4DLangVGGT, 3D Semantic Occupancy Prediction, Self-Supervised Learning, VGGT">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding</title>
 
@@ -33,39 +33,47 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GaussTR: Foundation Model-Aligned Gaussian Transformer for
-              Self-Supervised 3D Spatial Understanding</h1>
+            <h1 class="title is-1 publication-title">4DLangVGGT: 4D Language Visual Geometry Grounded Transformer</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=_45BVtQAAAAJ">Haoyi
-                  Jiang</a><sup>1</sup>,&nbsp;</span>
+                <a href="https://scholar.google.com/citations?user=C9B5JKYAAAAJ&hl=en">Xianfeng Wu</a><sup>3,4</sup>,&nbsp;</span>
               <span class="author-block">
-                Liu Liu<sup>2</sup>,&nbsp;</span>
+                <a href="https://scholar.google.com/citations?user=0bmTpcAAAAAJ&hl=zh-CN">Yajing Bai</a><sup>3</sup>,&nbsp;</span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=PH8rJHYAAAAJ">Tianheng
-                  Cheng</a><sup>1</sup>,&nbsp;</span>
+                <a href="https://scholar.google.com/citations?user=LhdBgMAAAAAJ&hl=en">Minghan Li</a><sup>2</sup>,&nbsp;</span>
               <span class="author-block">
-                Xinjie Wang<sup>2</sup>,&nbsp;</span>
+                <a href="https://xianzuwu.github.io/">Xianzu Wu</a><sup>5</sup>,&nbsp;</span>
               <span class="author-block">
-                <a href="https://wzmsltw.github.io/">Tianwei Lin</a><sup>2</sup>,</span><br>
+                <a href="https://openreview.net/profile?id=~Xueqi_Zhao2">Xueqi Zhao</a><sup>1</sup>,&nbsp;</span><br>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=HQfc8TEAAAAJ">Zhizhong
-                  Su</a><sup>2</sup>,&nbsp;</span>
+                <a href="https://scholar.google.com/citations?user=nEGuRZAAAAAJ&hl=zh-CN">Zhongyuan Lai</a><sup>1</sup>,&nbsp;</span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ">Wenyu Liu</a><sup>1</sup>,&nbsp;</span>
+                <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ">Wenyu Liu</a><sup>3</sup>,&nbsp;</span>
               <span class="author-block">
-                <a href="https://xwcv.github.io/">Xinggang Wang</a><sup>1</sup></span>
+                <a href="https://xwcv.github.io/">Xinggang Wang</a><sup>3</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Huazhong University of Science & Technology,&nbsp;</span>
-              <span class="author-block"><sup>2</sup>Horizon Robotics</span>
+              <span class="author-block"><sup>1</sup>State Key Laboratory of Precision Blasting, Jianghan University,&nbsp;</span><br>
+              <span class="author-block"><sup>2</sup>Harvard AI and Robotics Lab, Harvard University,&nbsp;</span><br>
+              <span class="author-block"><sup>3</sup>School of EIC, Huazhong University of Science and Technology,&nbsp;</span><br>
+              <span class="author-block"><sup>4</sup>Department of Computing, The Hong Kong Polytechnic University,&nbsp;</span><br>
+              <span class="author-block"><sup>5</sup>Department of Computer Science, Hong Kong Baptist University</span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2412.13193" target="_blank"
+                  <a href="https://anonymous.4open.science/r/4dlangvggt" target="_blank"
+                    class="external-link button is-normal is-rounded is-light">
+                    <span class="icon">
+                      <i class="fas fa-globe"></i>
+                    </span>
+                    <span>Project Page</span>
+                  </a>
+                </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="link-block">
+                  <a href="#" target="_blank"
                     class="external-link button is-normal is-rounded is-light">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -74,16 +82,7 @@
                   </a>
                 </span>&nbsp;&nbsp;&nbsp;&nbsp;
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2412.13193" target="_blank"
-                    class="external-link button is-normal is-rounded is-light">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="link-block">
-                  <a href="https://github.com/hustvl/GaussTR" target="_blank"
+                  <a href="https://github.com/hustvl/4DLangVGGT" target="_blank"
                     class="external-link button is-normal is-rounded is-light">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -104,19 +103,16 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              3D Semantic Occupancy Prediction is fundamental for spatial understanding, yet existing approaches face
-              challenges in scalability and generalization due to their reliance on extensive labeled data and
-              computationally intensive voxel-wise representations.
-              In this paper, we introduce GaussTR, a novel Gaussian-based Transformer framework that unifies sparse 3D
-              modeling with foundation model alignment through Gaussian representations to advance 3D spatial
-              understanding. GaussTR predicts sparse sets of Gaussians in a feed-forward manner to represent 3D scenes.
-              By splatting the Gaussians into 2D views and aligning the rendered features with foundation models,
-              GaussTR facilitates self-supervised 3D representation learning and enables open-vocabulary semantic
-              occupancy prediction without requiring explicit annotations.
-              Empirical experiments on the Occ3D-nuScenes dataset demonstrate GaussTR's state-of-the-art zero-shot
-              performance of 12.27 mIoU, along with a 40% reduction in training time. These results highlight the
-              efficacy of GaussTR for scalable and holistic 3D spatial understanding, with promising implications in
-              autonomous driving and embodied agents.<br><br><br>
+              Constructing 4D language fields is crucial for embodied AI, augmented/virtual reality, and 4D scene understanding, as they provide enriched semantic representations of dynamic environments and enable open-vocabulary querying in complex scenarios. However, existing approaches to 4D semantic field construction primarily rely on scene-specific Gaussian splatting, which requires per-scene optimization, exhibits limited generalization, and is difficult to scale to real-world applications.
+            </p>
+            <p>
+              To address these limitations, we propose <strong>4DLangVGGT</strong>, the first Transformer-based feed-forward unified framework for 4D language grounding, that jointly integrates geometric perception and language alignment within a single architecture. 4DLangVGGT has two key components: the 4D Visual Geometry Transformer, StreamVGGT, which captures spatio-temporal geometric representations of dynamic scenes; and the Semantic Bridging Decoder (SBD), which projects geometry-aware features into a language-aligned semantic space, thereby enhancing semantic interpretability while preserving structural fidelity.
+            </p>
+            <p>
+              Unlike prior methods that depend on costly per-scene optimization, 4DLangVGGT can be jointly trained across multiple dynamic scenes and directly applied during inference, achieving both efficiency and strong generalization. This design significantly improves the practicality of large-scale deployment and establishes a new paradigm for open-vocabulary 4D scene understanding.
+            </p>
+            <p>
+              Experiments on HyperNeRF and Neu3D datasets demonstrate that our approach not only generalizes effectively but also achieves state-of-the-art performance, achieving up to <strong>2%</strong> gains under per-scene training and <strong>1%</strong> improvements under multi-scene training.
             </p>
           </div>
         </div>
