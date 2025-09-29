@@ -18,6 +18,56 @@ pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https
 pip install -r requirements.txt
 ```
 
+## QuickStart
+### Download Checkpoints
+Please download the checkpoint of StreamVGGT from [here](https://github.com/wzzheng/StreamVGGT) and put the checkpoint folder under `ckpt/streamvggt`
+
+The checkpoint of 4DLangVGGT is availavle at （Hugging Face）(待补充) and put the checkpoint folder under `ckpt/4dlangvggt`
+
+### Inference
+Run the following command to generate the demo:
+```bash
+bash scripts/infer.sh
+```
+The results will be saved under `eval/eval_results`.
+
+## Folder Structure
+The overall folder structure should be organized as follows：
+```text
+4DLangVGGT
+|-- ckpt
+|   |-- streamvggt
+|   |   |-- 
+|   |-- 4dlangvggt
+|   |   |-- 
+|-- data
+|   |-- hypernerf
+|   |   |-- americano
+|   |   |   |-- annotations
+|   |   |   |   |-- train
+|   |   |   |   |-- README
+|   |   |   |   |-- video_annotations.json
+|   |   |   |-- camera
+|   |   |   |-- rgb
+|   |   |   |   |-- 1x
+|   |   |   |   |   |-- 000001.png
+|   |   |   |   ...
+|   |   |   |   |-- 2x
+|   |   |   ...
+|   |   |   |-- dataset.json
+|   |   |   |-- metadata.json
+|   |   |   |-- points.npy
+|   |   |   |-- scene.json
+|   |   |   |-- points3D_downsample2.ply
+|   |   |-- chickchicken
+|   |   ...
+|   |-- neu3d
+|   |   |-- coffee_martini
+|   |   |   |-- annotations
+|   |   |   |   |-- train
+|   |   ...
+```
+
 ## Training
 First, download pretrain [StreamVGGT](https://github.com/wzzheng/StreamVGGT) ckpt
 ```bash
