@@ -82,7 +82,7 @@
                   </a>
                 </span>&nbsp;&nbsp;&nbsp;&nbsp;
                 <span class="link-block">
-                  <a href="https://github.com/hustvl/4DLangVGGT" target="_blank"
+                  <a href="https://github.com/hustvl/4DLangVGGT/" target="_blank"
                     class="external-link button is-normal is-rounded is-light">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -153,14 +153,17 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">Framework</h2>
       <div class="content has-text-justified">
-        The GaussTR framework initiates with extracting multi-view features with pre-trained foundation models. A series
-        of Transformer layers then predict sparse sets of Gaussian queries to represent the 3D scene. During the
-        training phase, predicted Gaussians are rendered via differentiable splatting into source 2D views, enforcing
-        alignment with 2D depth and features from foundation models. At inference, Gaussian features are converted into
-        semantic logits by measuring similarity with text-embedded category vectors, followed by voxelization to produce
-        volumetric predictions.
+        The framework integrates a geometry encoder, a semantic bridging decoder, 
+        and a multi-objective training strategy to achieve language-aware 4D fields with geometric fidelity and semantic alignment.
       </div>
       <img src="static/images/framework.png">
+      <div class="content has-text-justified">
+        Input video frames are processed by StreamVGGT to obtain geometry tokens. The Semantic Bridging Decoder 
+        predicts both RGB reconstructions and semantic embeddings, while the geometry decoder estimates depth maps 
+        and camera poses. Inverse-projection lifts them into a 3D point cloud, onto which the predicted RGB and semantics 
+        are colorized, yielding 3D frames and 3D semantic maps.
+      </div>
+      <img src="static/images/inference.png">
     </div>
   </section>
 
@@ -181,14 +184,9 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">Visulizations</h2>
       <div class="content has-text-justified">
-        We further analyze GaussTR’s cross-modal consistency by visualizing rendered 2D depth and segmentation maps of
-        Gaussian predictions. To improve interpretability, we apply color perturbations to the semantic maps to
-        highlight the distribution of individual Gaussians and reveal how they collectively reconstruct the scene
-        layout.
-        Additionally, GaussTR exhibits impressive generalization capability to novel and scarce categories, such as
-        traffic lights and street signs. Owing to its alignment with visual-language models, GaussTR can seamlessly
-        adapt to these categories, generating prominent activations in corresponding regions and further validating its
-        versatility.
+        We comparison of time-agnostic query masks. The results demonstrate that our method
+        consistently extracts accurate object masks in both intact and fragmented cookie scenarios, whereas
+        4DLangSplat exhibits degraded performance when handling fragmented cases.
       </div>
       <img src="static/images/vis.png">
     </div>
@@ -197,12 +195,11 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title is-3">BibTeX</h2>
-      <pre><code>@inproceedings{GaussTR,
-  title     = {GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding},
-  author    = {Haoyi Jiang and Liu Liu and Tianheng Cheng and Xinjie Wang and Tianwei Lin and Zhizhong Su and Wenyu Liu and Xinggang Wang},
-  year      = 2025,
-  booktitle = {CVPR}
-}</code></pre>
+      <pre><code>@inproceedings{4DLangVGGT,title = {4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer},
+        author = {Xianfeng Wu and Yajing Bai and Minghan Li and Xianzu Wu and Xueqi Zhao and Zhongyuan Lai and Wenyu Liu and Xinggang Wang},
+        year = 2025,
+        booktitle = {CVPR}}
+</code></pre>
     </div>
   </section>
 
