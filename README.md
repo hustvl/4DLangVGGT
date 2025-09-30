@@ -1,13 +1,23 @@
 # 4DLangVGGT: 4D Language Visual Geometry Grounded Transformer
 Official implementation of “4D LangVGGT: 4D Language-Visual Geometry Grounded Transformer”
 
-## Enviroment
+
+## Overview
+4DLangVGGT is a feed-forward framework for language-aware 4D scene understanding, combining StreamVGGT for dynamic geometry reconstruction with a Semantic Bridging Decoder (SBD) that aligns geometry tokens with language semantics. Unlike Gaussian Splatting methods that require per-scene optimization, our feed-forward design can be trained across multiple scenes and directly applied at inference, achieving scalable, efficient, and open-vocabulary 4D semantic fields with state-of-the-art performance on HyperNeRF and Neu3D benchmarks.
+
+## Installation
 
 4D LangVGGT uses the following software versions:
 - Python 3.10
 - CUDA 12.4
 
-On default, run the following commands to install the relative packages
+First, please clone 4DLangVGGT according to the command below.
+```bash
+git clone https://github.com/hustvl/4DLangVGGT.git
+cd 4DLangVGGT
+```
+
+Then create a conda environment using the following command:
 
 ```bash
 # if you lose some pkgs
@@ -18,18 +28,22 @@ pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https
 pip install -r requirements.txt
 ```
 
+## Dataset
+4DLangVGGT is trained and evaluated on the [HyperNeRF](https://github.com/google/hypernerf) and [Neu3D](https://github.com/facebookresearch/Neural_3D_Video) datasets. Please download the datasets and put them in the folder `./data`. For data processing, please refer to [4DLangSplat](https://github.com/zrporz/4DLangSplat) to generate segmentation map and extract CLIP and Video features.
+
+
 ## QuickStart
 ### Download Checkpoints
-Please download the checkpoint of StreamVGGT from [here](https://github.com/wzzheng/StreamVGGT) and put the checkpoint folder under `ckpt/streamvggt`
+Please download the checkpoint of StreamVGGT from [here](https://github.com/wzzheng/StreamVGGT) and put the checkpoint folder under `./ckpt/streamvggt`
 
-The checkpoint of 4DLangVGGT is availavle at （Hugging Face）(待补充) and put the checkpoint folder under `ckpt/4dlangvggt`
+The checkpoint of 4DLangVGGT is availavle at [Hugging Face](https://huggingface.co/YajingB/4DLangVGGT) and put the checkpoint folder under `./ckpt/4dlangvggt`
 
 ### Inference
 Run the following command to generate the demo:
 ```bash
 bash scripts/infer.sh
 ```
-The results will be saved under `eval/eval_results`.
+The results will be saved under `./eval/eval_results`.
 
 ## Folder Structure
 The overall folder structure should be organized as follows：
@@ -37,7 +51,8 @@ The overall folder structure should be organized as follows：
 4DLangVGGT
 |-- ckpt
 |   |-- streamvggt
-|   |   |-- 
+|   |   |-- checkpoints.pth
+|   |   |-- model.safetensors
 |   |-- 4dlangvggt
 |   |   |-- 
 |-- data
@@ -53,6 +68,9 @@ The overall folder structure should be organized as follows：
 |   |   |   |   |   |-- 000001.png
 |   |   |   |   ...
 |   |   |   |   |-- 2x
+|   |   |   |   |   |-- 000001.png
+|   |   |   |-- streamvggt_token
+|   |   |   |   |   |-- 000001.npy
 |   |   |   ...
 |   |   |   |-- dataset.json
 |   |   |   |-- metadata.json
@@ -69,14 +87,19 @@ The overall folder structure should be organized as follows：
 ```
 
 ## Training
-First, download pretrain [StreamVGGT](https://github.com/wzzheng/StreamVGGT) ckpt
+### Step1: Generate Geometry Tokens
+To reduce the amount of memory required during training, we first preprocess the video using StreamVGGT, extract the geometry tokens, and save them in the folder `./data/<dataset>/<class>/streamvggt_token`. Take the americano class from the HyperNeRF dataset as an example, you need to ensure the extracted geometry tokens are in the folder `./data/hypernerf/americano/streamvggt_token`.
 ```bash
-huggingface-cli download --resume-download lch01/StreamVGGT --local-dir lch01/StreamVGGT
-
+python preprocess/generate_vggttoken.py \
+    --categories americano \
+    --img_root data/hypernerf \
+    --ckpt ckpt/streamvggt/checkpoints.pth \
+    --max_num 128 \
+    --device cuda
 ```
 
-Then, pretrain your model after follow [4DLangSplat](https://github.com/zrporz/4DLangSplat) to preprocess your dataset
-
+### Step2: Train 4DLangVGGT
+We provide the following commands for training.
 ```bash
 torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 train.py --batch_size 8 \
                 --data_root YOUR_DATA_ROOT --streamvggt_ckpt_path YOUR_STREAMVGGT_CKPT  \
