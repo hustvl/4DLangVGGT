@@ -9,24 +9,21 @@
     ·
     <a href="https://scholar.google.com/citations?user=0bmTpcAAAAAJ&hl=en&oi=ao">Yajing Bai<sup>1, 3</sup><sup>#</sup></a>
     ·
-    <a href="https://scholar.google.com/citations?user=LhdBgMAAAAAJ&hl=en">Minghan Li<sup>2</sup><sup>#</sup></a>
+    <a href="https://scholar.google.com/citations?user=LhdBgMAAAAAJ&hl=en">Minghan Li<sup>2</sup></a>
     ·
-    <a href="https://openreview.net/profile?id=~Xianzu_Wu1">Xianzu Wu<sup>1, 5</sup><sup>#</sup></a>
+    <a href="https://openreview.net/profile?id=~Xianzu_Wu1">Xianzu Wu<sup>1, 5</sup></a>
     ·
     <a href="https://github.com/hustvl/4DLangVGGT">Xueqi Zhao<sup>1, 6</sup></a>
+    ·
+    <a href="https://github.com/hustvl/4DLangVGGT">Zhongyuan Lai<sup>1, 6</sup></a>
     ·
     <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ&hl=en">Wenyu Liu<sup>3</sup></a>
     ·
     <a href="https://xwcv.github.io/">Xinggang Wang<sup>3</sup><sup>*</sup></a>
     <br />
-    <p align="center"> <sub><sup>1</sup> <a href="https://amc.hkust.edu.hk/">HKUST AMC<sup></a>, <sup>2</sup> <a href="https://www.everlyn.ai/">Everlyn AI<sup></a>, <sup>3</sup> <a href="https://www.cs.ucf.edu/">UCF CS<sup></a>, <sup>#</sup>Equal contribution, <sup>*</sup> Corresponding Author</sub></p>
+    <p align="center"> <sub><sup>1</sup> <a href="https://sklpb.jhun.edu.cn/sklpben/main.htm">State Key Laboratory of Precision Blasting, Jianghan University<sup></a>, <sup>2</sup> <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab, Harvard University<sup></a>, <sup>3</sup> <a href="http://english.eic.hust.edu.cn/">School of EIC, Huazhong University of Science and Technology<sup></a>, <sup>4</sup> <a href="https://www.polyu.edu.hk/comp/">Department of Computing, The Hong Kong Polytechnic University<sup></a>, <sup>5</sup> <a href="https://www.comp.hkbu.edu.hk/v1/">Department of Computer Science, Hong Kong Baptist University<sup></a>, <sup>6</sup> <a href="https://en.hbnu.edu.cn/CollegeofMathematicsandStatistics/list.htm">School of Mathematics and Statistics, Hubei University of Education<sup></a>, <sup>#</sup>Equal contribution, <sup>*</sup> Corresponding Author</sub></p>
   </p>
 
-<p align="center">
-  <img src="demo/demo.png" width="720">
-</p>
-
-This is a PyTorch/GPU implementation of [4DLangVGGT]()
 
 
 ## Overview
