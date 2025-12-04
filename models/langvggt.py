@@ -18,7 +18,7 @@ class Langvggt(nn.Module):
         super().__init__()
         self.streamvggt = StreamVGGT(img_size=img_size, patch_size=patch_size, embed_dim=embed_dim) # 4D VGGT pretrained model
         self.lang_head = LanguageHead_Multi(dim_in=2 * embed_dim, patch_size=patch_size, lang_dim=lang_dim)
-        self.lang_video_head = LanguageHead_Video(dim_in=2 * embed_dim, patch_size=patch_size, lang_dim=lang_dim, hidden_dim=64)
+        # self.lang_video_head = LanguageHead_Video(dim_in=2 * embed_dim, patch_size=patch_size, lang_dim=lang_dim, hidden_dim=64)
         self.lang_dim = lang_dim
 
     def load_from_pretrained(self, streamvggt_model, lang_head_model):
@@ -32,9 +32,9 @@ class Langvggt(nn.Module):
         if self.lang_dim == 3:
             self.lang_head.load_state_dict(lang_head_ckpt['model_state_dict'], strict=True)
             self.lang_head.eval().cuda()
-        elif self.lang_dim == 6:
-            self.lang_video_head.load_state_dict(lang_head_ckpt['model_state_dict'], strict=True)
-            self.lang_video_head.eval().cuda()
+        # elif self.lang_dim == 6:
+        #     self.lang_video_head.load_state_dict(lang_head_ckpt['model_state_dict'], strict=True)
+        #     self.lang_video_head.eval().cuda()
         del streamvggt_ckpt
         del lang_head_ckpt
 

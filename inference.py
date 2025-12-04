@@ -9,7 +9,6 @@ from pathlib import Path
 from streamvggt.utils.load_fn import load_and_preprocess_images
 
 from models.langvggt import Langvggt
-from models.langvggt4d import Langvggt4D
 
 # ---------- utils ----------
 to8b = lambda x: (255 * np.clip(x, 0, 1)).astype(np.uint8)
@@ -88,10 +87,10 @@ def main():
     with torch.no_grad():
         if args.do_render:
             print("Running 2D semantic rendering...")
-            if hasattr(model, "inference_long_clip_eval"):
-                model.inference_long_clip_eval(views, img_height, img_width, save_dir=save_base, max_num=120)
+            if hasattr(model, "inference_long_video"):
+                model.inference_long_video(views, img_height, img_width, save_dir=save_base, max_num=120)
             else:
-                print("Fallback: model.inference_long_clip_eval not available")
+                print("Fallback: model.inference_long_video not available")
 
             if args.make_video:
                 for level in ["small", "middle", "large"]:
