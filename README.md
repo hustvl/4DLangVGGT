@@ -139,9 +139,10 @@ torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 train.py --batch_size 8 \
 
 ### 🏄 Top contributors:
 
-<a href="https://github.com/hustvl/4DLangVGGT/graphs/contributors">
+<!-- <a href="https://github.com/hustvl/4DLangVGGT/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=hustvl/4DLangVGGT" alt="contrib.rocks image" />
-</a>
+</a> -->
+<img src="https://contrib.nn.ci/api/avatars?repo=hustvl/4DLangVGGT&size=40&round=true&limit=3&gap=4" alt="Top contributors" style="border: none;"/>
 
 ## Acknowledgements
 Our code is based on the following brilliant repositories:
