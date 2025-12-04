@@ -1,5 +1,32 @@
-# 4DLangVGGT: 4D Language Visual Geometry Grounded Transformer
-Official implementation of “4D LangVGGT: 4D Language-Visual Geometry Grounded Transformer”
+# 4DLangVGGT: 4D Language Visual Geometry Grounded Transformer <br><sub>Official PyTorch Implementation</sub>
+
+#### [<code>HF Checkpoint 🚀</code>](https://huggingface.co/YajingB/4DLangVGGT) | [<code>Paper 📝</code>]() 
+
+  <p align="center">
+    4DLangVGGT: 4D Language Visual Geometry Grounded Transformer
+    <br />
+    <a href="https://scholar.google.com/citations?user=C9B5JKYAAAAJ&hl=en">Xianfeng Wu<sup>1, 3, 4</sup><sup>#</sup></a>
+    ·
+    <a href="https://scholar.google.com/citations?user=0bmTpcAAAAAJ&hl=en&oi=ao">Yajing Bai<sup>1, 3</sup><sup>#</sup></a>
+    ·
+    <a href="https://scholar.google.com/citations?user=LhdBgMAAAAAJ&hl=en">Minghan Li<sup>2</sup><sup>#</sup></a>
+    ·
+    <a href="https://openreview.net/profile?id=~Xianzu_Wu1">Xianzu Wu<sup>1, 5</sup><sup>#</sup></a>
+    ·
+    <a href="https://github.com/hustvl/4DLangVGGT">Xueqi Zhao<sup>1, 6</sup></a>
+    ·
+    <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ&hl=en">Wenyu Liu<sup>3</sup></a>
+    ·
+    <a href="https://xwcv.github.io/">Xinggang Wang<sup>3</sup><sup>*</sup></a>
+    <br />
+    <p align="center"> <sub><sup>1</sup> <a href="https://amc.hkust.edu.hk/">HKUST AMC<sup></a>, <sup>2</sup> <a href="https://www.everlyn.ai/">Everlyn AI<sup></a>, <sup>3</sup> <a href="https://www.cs.ucf.edu/">UCF CS<sup></a>, <sup>#</sup>Equal contribution, <sup>*</sup> Corresponding Author</sub></p>
+  </p>
+
+<p align="center">
+  <img src="demo/demo.png" width="720">
+</p>
+
+This is a PyTorch/GPU implementation of [4DLangVGGT]()
 
 
 ## Overview
