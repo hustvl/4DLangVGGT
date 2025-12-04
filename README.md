@@ -1,6 +1,6 @@
 # 4DLangVGGT: 4D Language Visual Geometry Grounded Transformer <br><sub>Official PyTorch Implementation</sub>
 
-#### [<code>HF Checkpoint 🚀</code>](https://huggingface.co/YajingB/4DLangVGGT) | [<code>Paper 📝</code>]() 
+#### [<code>Project Page 🤩</code>]() | [<code>HF Checkpoint 🚀</code>](https://huggingface.co/YajingB/4DLangVGGT) | [<code>Paper 📝</code>]() 
 
   <p align="center">
     4DLangVGGT: 4D Language Visual Geometry Grounded Transformer
@@ -24,6 +24,12 @@
     <p align="center"> <sub><sup>1</sup> <a href="https://sklpb.jhun.edu.cn/sklpben/main.htm">State Key Laboratory of Precision Blasting, Jianghan University<sup></a>, <sup>2</sup> <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab, Harvard University<sup></a>, <sup>3</sup> <a href="http://english.eic.hust.edu.cn/">School of EIC, Huazhong University of Science and Technology<sup></a>, <sup>4</sup> <a href="https://www.polyu.edu.hk/comp/">Department of Computing, The Hong Kong Polytechnic University<sup></a>, <sup>5</sup> <a href="https://www.comp.hkbu.edu.hk/v1/">Department of Computer Science, Hong Kong Baptist University<sup></a>, <sup>6</sup> <a href="https://en.hbnu.edu.cn/CollegeofMathematicsandStatistics/list.htm">School of Mathematics and Statistics, Hubei University of Education<sup></a>, <sup>#</sup>Equal contribution, <sup>*</sup> Corresponding Author</sub></p>
   </p>
 
+  <p align="center">
+  <img src="demo/demo.png" width="720">
+</p>
+
+This is a PyTorch/GPU implementation of [4DLangVGGT]()
+
 
 
 ## Overview
@@ -37,7 +43,7 @@
 
 First, please clone 4DLangVGGT according to the command below.
 ```bash
-git clone https://github.com/hustvl/4DLangVGGT.git
+git clone https://github.com/hustvl/4DLangVGGT.git --single-branch
 cd 4DLangVGGT
 ```
 
@@ -130,6 +136,12 @@ torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 train.py --batch_size 8 \
                 --num_workers 0 --output_dir unify_hyper_clip --mode gt --cos --wandb --joint_train \
                 --feat_root clip_features-all_dim3 \
 ```
+
+### 🏄 Top contributors:
+
+<a href="https://github.com/hustvl/4DLangVGGT/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=hustvl/4DLangVGGT" alt="contrib.rocks image" />
+</a>
 
 ## Acknowledgements
 Our code is based on the following brilliant repositories:
