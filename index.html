@@ -8,7 +8,7 @@
   <meta name="keywords"
     content="4DLangVGGT, 3D Semantic Occupancy Prediction, Self-Supervised Learning, VGGT">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding</title>
+  <title>4DLangVGGT: 4D Language Visual Geometry Grounded Transformer</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -171,12 +171,14 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">Results</h2>
       <div class="content has-text-justified">
-        GaussTR achieves state-of-the-art zero-shot performance of 12.27 mIoU, outperforming previous methods by 2.33
-        mIoU while reducing training time by 40%. GaussTR demonstrates performance superiority across diverse foundation
-        models including FeatUp and Talk2DINO. These findings validate the scalability and generalization of sparse
-        Gaussian-based 3D modeling and foundation model alignment for self-supervised spatial understanding.
+        4DLangVGGT evaluate two training regimes to examine both cross-scene applicability and per-scene perfor-
+mance. The first regime trains a single model on multiple videos and applies this shared model
+for inference across different scenes (“multi-video single model”). The second regime adopts the
+per-scene protocol used in 4DLangSplat, i.e., training one model per scene. This per-scene setting is
+included to align with existing Gaussian splatting methods and to provide a fair comparison of our
+method’s performance.
       </div>
-      <img src="static/images/main_results.png">
+      <img src="static/images/main result.png">
     </div>
   </section>
 
@@ -198,7 +200,7 @@
       <pre><code>@inproceedings{4DLangVGGT,title = {4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer},
         author = {Xianfeng Wu and Yajing Bai and Minghan Li and Xianzu Wu and Xueqi Zhao and Zhongyuan Lai and Wenyu Liu and Xinggang Wang},
         year = 2025,
-        booktitle = {CVPR}}
+        booktitle = {ArXiv}}
 </code></pre>
     </div>
   </section>
