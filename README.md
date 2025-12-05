@@ -143,7 +143,7 @@ torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 train.py --batch_size 8 \
   <img src="https://contrib.rocks/image?repo=hustvl/4DLangVGGT" alt="contrib.rocks image" />
 </a> -->
 <a href="https://github.com/hustvl/4DLangVGGT/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=hustvl/4DLangVGGT" alt="contrib.rocks image" />
+  <img src="https://contrib.rocks/image?repo=hustvl/4DLangVGGT" />
 </a>
 
 ## Acknowledgements
