@@ -15,7 +15,7 @@
     ·
     <a href="https://github.com/hustvl/4DLangVGGT">Xueqi Zhao<sup>1, 6</sup></a>
     ·
-    <a href="https://github.com/hustvl/4DLangVGGT">Zhongyuan Lai<sup>1, 6</sup></a>
+    <a href="https://github.com/hustvl/4DLangVGGT">Zhongyuan Lai<sup>1</sup></a>
     ·
     <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ&hl=en">Wenyu Liu<sup>3</sup></a>
     ·
