@@ -1,6 +1,6 @@
 # 4DLangVGGT: 4D Language Visual Geometry Grounded Transformer <br><sub>Official PyTorch Implementation</sub>
 
-#### [<code>Project Page 🤩</code>](https://hustvl.github.io/4DLangVGGT/) | [<code>HF Checkpoint 🚀</code>](https://huggingface.co/YajingB/4DLangVGGT) | [<code>Paper 📝</code>]() 
+#### [<code>Project Page 🤩</code>](https://hustvl.github.io/4DLangVGGT/) | [<code>HF Checkpoint 🚀</code>](https://huggingface.co/YajingB/4DLangVGGT) | [<code>Paper 📝</code>](https://arxiv.org/abs/2512.05060) 
 
   <p align="center">
     4DLangVGGT: 4D Language Visual Geometry Grounded Transformer
