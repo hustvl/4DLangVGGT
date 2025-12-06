@@ -28,7 +28,7 @@
   <img src="demo/demo.png" width="720">
 </p>
 
-This is a PyTorch/GPU implementation of [4DLangVGGT]()
+This is a PyTorch/GPU implementation of [4DLangVGGT](https://arxiv.org/abs/2512.05060)
 
 
 
