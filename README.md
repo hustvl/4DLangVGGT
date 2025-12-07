@@ -146,6 +146,16 @@ torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 train.py --batch_size 8 \
   <img src="https://contrib.rocks/image?repo=hustvl/4DLangVGGT" />
 </a>
 
+## Cite
+```
+@article{wu20254dlangvggt,
+  title={4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer},
+  author={Wu, Xianfeng and Bai, Yajing and Li, Minghan and Wu, Xianzu and Zhao, Xueqi and Lai, Zhongyuan and Liu, Wenyu and Wang, Xinggang},
+  journal={arXiv preprint arXiv:2512.05060},
+  year={2025}
+}
+```
+
 ## Acknowledgements
 Our code is based on the following brilliant repositories:
 
